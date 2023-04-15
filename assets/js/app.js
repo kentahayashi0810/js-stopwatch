@@ -12,10 +12,10 @@ window.onload = function () {
 
   buttonStart.onclick = function () {
     clearInterval(interval);
-    interval = setInter(startTimer, 10);
+    interval = setInterval(startTimer, 10);
   };
 
-  buttonReset.onclick = function () {
+  buttonPause.onclick = function () {
     clearInterval(interval);
   };
 
@@ -26,27 +26,27 @@ window.onload = function () {
     appendSeconds.innerHTML = seconds;
     appendTens.innerHTML = tens;
   };
+
+  function startTimer() {
+    tens++;
+
+    if (tens < 10) {
+      appendTens.innerHTML = "0" + tens;
+    }
+
+    if (tens > 9) {
+      appendTens.innerHTML = tens;
+    }
+
+    if (tens > 99) {
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + tens;
+    }
+
+    if (seconds > 9) {
+      appendSeconds.innerHTML = seconds;
+    }
+  }
 };
-
-function startTimer() {
-  tens++;
-
-  if (tens < 10) {
-    appendTens.innerHTML = "0" + tens;
-  }
-
-  if (tens > 9) {
-    appendTens.innerHTML = tens;
-  }
-
-  if (tens > 99) {
-    seconds++;
-    appendSeconds.innerHTML = "0" + seconds;
-    tens = 0;
-    appendTens.innerHTML = "0" + tens;
-  }
-
-  if (seconds > 9) {
-    appendSeconds.innerHTML = seconds;
-  }
-}
