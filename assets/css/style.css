@@ -1,0 +1,47 @@
+body {
+  background-color: coral;
+  position: relative;
+  height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px;
+  margin: 0 auto;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  margin-top: 33vh;
+  padding: 5rem;
+}
+
+.timerDisplay {
+  font-size: 6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #205e94;
+  border-radius: 5px;
+}
+
+button:first-of-type {
+  background-color: #20b380;
+}
+
+button:last-of-type {
+  background-color: #d23332;
+}
